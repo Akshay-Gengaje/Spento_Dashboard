@@ -1,11 +1,14 @@
 import NavBar from "../../components/NavBar/NavBar";
 import Sidebar from "../../components/Sidebar/Sidebar";
+import DashboardContainer from "../Container/DashboardContainer";
 
 const DashboardLayout = () => {
   return (
-    <div className="flex w-full">
+    <div className="flex max-h-screen w-full gap-2">
       <Sidebar />
-      <NavBar />
+      <NavBar>
+        <DashboardContainer />
+      </NavBar>
     </div>
   );
 };

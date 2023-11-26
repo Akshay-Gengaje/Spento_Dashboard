@@ -1,10 +1,17 @@
 import DashboardLayout from "./layout/Dashboard/DashboardLayout";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
 function App() {
   return (
-    <>
-      <DashboardLayout />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/dashboard" element={<DashboardLayout />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

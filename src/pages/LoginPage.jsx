@@ -13,7 +13,10 @@ const LoginPage = () => {
       <div className="bg-login-grediant  h-full flex-1  overflow-y-scroll  ">
         <div className="w- flex h-full flex-col items-center px-10">
           <Logo className="mt-20 h-10 md:mt-20 md:h-16" />
-          <Devider className=" my-10 h-[2px] w-[250px] md:w-[400px]" />
+          <Devider
+            className=" my-10 h-[2px] w-[250px] md:w-[400px]"
+            backgroundColor="dark_blue"
+          />
           <LoginBox />
           <img
             src="/images/Group.svg"

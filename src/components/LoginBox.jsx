@@ -1,7 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import TextField from "./TextField";
 
 const LoginBox = () => {
+  const navigate = useNavigate();
   return (
     <div className="shadow-login-box-shadow rounded-xl bg-[#0672A3] px-5 py-[60px] md:px-10">
       {/* Email ID Text Field  */}
@@ -38,6 +40,9 @@ const LoginBox = () => {
         className={
           "mt-[40px] h-fit w-full rounded-md bg-white p-[10px] text-[#0672A3]"
         }
+        onClick={() => {
+          navigate("/dashboard");
+        }}
       >
         Sign In
       </Button>
