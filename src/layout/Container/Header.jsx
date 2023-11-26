@@ -3,7 +3,7 @@ import Devider from "../../ui/Devider";
 const Header = ({ title, section }) => {
   return (
     <>
-      <div className="flex justify-between px-10 pt-8">
+      <div className="flex justify-between px-2 pt-8 md:px-10">
         <p className="text-2xl">{title}</p>
         <p className="align-bottom uppercase">{section}</p>
       </div>
