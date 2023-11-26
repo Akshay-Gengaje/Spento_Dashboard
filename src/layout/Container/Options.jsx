@@ -6,7 +6,7 @@ const Options = () => {
   const blueBtn =
     "bg-darkBlue min-w-fit items-center rounded-lg px-6 py-3 text-white flex justify-center  ";
   return (
-    <div className="mt-5 flex min-w-fit items-center justify-between gap-5 overflow-x-scroll px-2 pb-3 md:px-10">
+    <div className="mt-5 flex min-w-full items-center justify-between gap-5 overflow-x-scroll px-2 pb-3 md:px-10">
       <div className=" flex min-w-fit items-center space-x-2">
         <Button className={grayBtn}>CSV</Button>
         <Button className={grayBtn}>Excel</Button>
