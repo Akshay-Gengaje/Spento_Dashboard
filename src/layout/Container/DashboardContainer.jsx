@@ -10,9 +10,7 @@ const DashboardContainer = ({ title, section, children }) => {
       {/* <Header title={title} section={section} /> */}
       <Header title="Manage Profile" section="Administrator" />
       <Options />
-      <div>
-        {children}
-      </div>
+      <div>{children}</div>
     </div>
   );
 };

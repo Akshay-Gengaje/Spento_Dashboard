@@ -5,10 +5,11 @@ import { routes } from "./routes";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
+  // const [isOpen, setIsOpen] = useState();
   return (
     <div
-      className=" my-6 ml-10 hidden h-[calc(100vh_-_48px)] w-96 rounded-[10px]  
-    border border-[#3d3d3d66] md:block"
+      className=" my-6 ml-10 hidden h-[calc(100vh_-_48px)] min-w-fit rounded-[10px]  
+    border border-[#3d3d3d66] lg:block"
     >
       <Menu />
       <Devider className="h-[1px] w-full bg-darkBlue" />

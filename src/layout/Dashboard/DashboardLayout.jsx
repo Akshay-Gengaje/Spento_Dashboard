@@ -4,7 +4,7 @@ import DashboardContainer from "../Container/DashboardContainer";
 
 const DashboardLayout = () => {
   return (
-    <div className="flex max-h-screen w-full gap-2">
+    <div className="flex max-h-screen w-full lg:gap-2">
       <Sidebar />
       <NavBar>
         <DashboardContainer />
