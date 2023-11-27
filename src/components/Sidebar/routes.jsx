@@ -2,14 +2,17 @@ import { RiAdminLine } from "react-icons/ri";
 import { LuLayoutDashboard } from "react-icons/lu";
 export const routes = [
   {
-    path: "/dashboard",
-    name: "Dashboard",
-    icon: <LuLayoutDashboard />,
+    category: {
+      name: "Dashboard",
+      icon: <LuLayoutDashboard />,
+    },
+    children: [],
   },
   {
-    path: "/admin/profile",
-    name: "Admin",
-    icon: <RiAdminLine />,
+    category: {
+      name: "Admin",
+      icon: <RiAdminLine />,
+    },
     children: [
       {
         path: "admin/profile",
