@@ -6,7 +6,12 @@ export const routes = [
       name: "Dashboard",
       icon: <LuLayoutDashboard />,
     },
-    children: [],
+    children: [
+      {
+        path: "dashboard",
+        name: "Dashboard",
+      },
+    ],
   },
   {
     category: {

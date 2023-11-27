@@ -9,20 +9,15 @@ const Sidebar = () => {
   const [expandedRoutes, setExpandedRoutes] = useState([]);
 
   const toggleSubRoutes = (routePath) => {
-    if (expandedRoutes.includes(routePath)) {
-      setExpandedRoutes((prevExpandedRoutes) =>
-        prevExpandedRoutes.filter((path) => path !== routePath),
-      );
-    } else {
-      setExpandedRoutes((prevExpandedRoutes) => [
-        ...prevExpandedRoutes,
-        routePath,
-      ]);
-    }
+    setExpandedRoutes((prevExpandedRoutes) =>
+      prevExpandedRoutes.includes(routePath)
+        ? prevExpandedRoutes.filter((path) => path !== routePath)
+        : [...prevExpandedRoutes, routePath],
+    );
   };
 
   return (
-    <div className="my-5 ml-10 hidden min-w-fit rounded-[10px] border border-[#3d3d3d66] lg:flex lg:flex-col ">
+    <div className="my-5 ml-10 hidden min-w-fit rounded-[10px] border border-[#3d3d3d66] lg:flex lg:flex-col">
       <div>
         <Menu />
         <Devider className="h-[1px] w-full bg-darkBlue" />
@@ -32,21 +27,25 @@ const Sidebar = () => {
           color="#000"
         />
       </div>
-      <div className=" w-full overflow-scroll">
+      <div className="w-full overflow-scroll">
         {routes.map((route) => (
           <div key={route.category.name}>
             <div
               onClick={() => toggleSubRoutes(route.category.name)}
-              className="flex w-full cursor-pointer items-center py-2 text-darkGray"
+              className={`flex w-full cursor-pointer items-center py-2 text-darkGray ${
+                expandedRoutes.includes(route.category.name)
+                  ? "bg-[#0672A3] text-white"
+                  : ""
+              }`}
               id="sidebar-menu"
             >
-              <span className=" ml-5 mr-3 text-[30px]">
+              <span className="ml-5 mr-3 text-[30px]">
                 {route.category.icon}
               </span>
               <span className="text-lg uppercase">{route.category.name}</span>
             </div>
             {expandedRoutes.includes(route.category.name) && route.children && (
-              <div className="pl-2">
+              <div className="pl-6">
                 {route.children.map((subRoute) => (
                   <SubMenu key={subRoute.path} subRoute={subRoute} />
                 ))}
