@@ -6,7 +6,10 @@ export default {
     extend: {
       colors: {
         darkBlue: "#0672A3",
+        lightBlue: "rgba(12, 159, 225, 1)",
         lightGray: "rgba(61, 61, 61, 0.20)",
+        gray: "rgba(61, 61, 61, 0.30)",
+        brightGray: "#E9F2F7",
         darkGray: "rgba(61, 61, 61, 1)",
       },
       fontFamily: {

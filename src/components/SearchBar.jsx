@@ -4,7 +4,7 @@ const SearchBar = ({ placeholder, backgroundColor, color }) => {
   }[backgroundColor];
   return (
     <div
-      className={`shadow-search mx-5  my-7 flex max-h-fit max-w-full rounded-md ${bgClassName} pr-[10px] focus:ring-1 `}
+      className={`shadow-search mx-5  my-4 flex max-h-fit max-w-full rounded-md ${bgClassName} pr-[10px] focus:ring-1 `}
     >
       <input
         type="text"

@@ -17,7 +17,7 @@ const LoginBox = () => {
         placeholder="Enter your password"
         icon={"/icons/password.svg"}
         type={"password"}
-        iconStyle="w-7 pr-2"
+        iconStyle="w-7 pr-2 border-none"
         marginTop="mt-5"
       />
 

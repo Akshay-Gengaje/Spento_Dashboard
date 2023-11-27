@@ -18,7 +18,11 @@ const NavMenu = () => {
         />
         <span className="mx-2 md:mx-5">Ben Cooper</span>
         <span>
-          <img src="/icons/down.svg" alt="user" className="mr-2md:mr-6" />
+          <img
+            src="/icons/down.svg"
+            alt="user"
+            className={`mr-2 md:mr-6 ${showMenu ? "rotate-180" : "rotate-360"}`}
+          />
         </span>
       </div>
       {/* Logout Button  */}

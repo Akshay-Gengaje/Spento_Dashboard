@@ -1,18 +1,40 @@
-import DashboardLayout from "./layout/Dashboard/DashboardLayout";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
-function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LoginPage />} />
-      </Routes>
+import DashboardLayout from "./layout/Dashboard/DashboardLayout";
+import Attendence from "./pages/Admin/Attendence";
+import Profile from "./pages/admin/profile/Profile";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
-      <Routes>
-        <Route path="/dashboard" element={<DashboardLayout />} />
-      </Routes>
-    </BrowserRouter>
-  );
+// import DashboardContainer from "./layout/Container/DashboardContainer";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <LoginPage />,
+  },
+
+  {
+    element: <DashboardLayout />,
+    children: [
+      {
+        index: true,
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/admin/profile",
+        element: <Profile />,
+      },
+      {
+        path: "/admin/attendence",
+        element: <Attendence />,
+      },
+    ],
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;
