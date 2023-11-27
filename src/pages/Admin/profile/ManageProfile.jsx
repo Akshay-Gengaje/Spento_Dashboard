@@ -1,7 +1,7 @@
 import Tab from "../../../components/Tabs/Tab";
 import DashboardContainer from "../../../layout/Container/DashboardContainer";
 
-const Profile = () => {
+const ManageProfile = () => {
   const tabsData = [
     { label: "Role", content: "Content for Tab 1" },
     { label: "Reporting To", content: "Content for Tab 2" },
@@ -14,4 +14,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default ManageProfile;
