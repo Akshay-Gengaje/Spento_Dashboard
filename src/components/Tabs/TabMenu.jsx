@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Button from "../Button";
 import SearchBar from "../SearchBar";
 import AddRole from "./AddModals/AddRole";
@@ -6,7 +6,7 @@ import AddReporting from "./AddModals/AddReporting";
 import AddEmployee from "./AddModals/AddEmployee";
 const TabMenu = ({ tab }) => {
   const [showModal, setShowModal] = useState(false);
-  useEffect(() => {}, [showModal]);
+
   return (
     <div className="flex items-center justify-between p-2">
       <Button
