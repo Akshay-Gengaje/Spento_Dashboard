@@ -73,14 +73,7 @@ const rows = [
     createdBy: "super admin",
     createdAt: "28-11-2023",
   },
-  {
-    id: 7,
-    sr: 7,
-    role: "Doc",
-    status: "Pending",
-    createdBy: "super admin",
-    createdAt: "28-11-2023",
-  },
+
 ];
 
 export default function Role() {
