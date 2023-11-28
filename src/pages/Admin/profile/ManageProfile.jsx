@@ -1,11 +1,14 @@
 import Tab from "../../../components/Tabs/Tab";
 import DashboardContainer from "../../../layout/Container/DashboardContainer";
+import Employee from "./Employee";
+import Reporting from "./Reporting";
+import Role from "./Role";
 
 const ManageProfile = () => {
   const tabsData = [
-    { label: "Role", content: "Content for Tab 1" },
-    { label: "Reporting To", content: "Content for Tab 2" },
-    { label: "Employee", content: "Content for Tab 3" },
+    { label: "Role", content: <Role /> },
+    { label: "Reporting To", content: <Reporting /> },
+    { label: "Employee", content: <Employee /> },
   ];
   return (
     <DashboardContainer title={"Manage Profile"} section={"Administrator"}>

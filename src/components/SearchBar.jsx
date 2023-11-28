@@ -1,11 +1,6 @@
-const SearchBar = ({ placeholder, backgroundColor, color }) => {
-  const bgClassName = {
-    bright_gray: "bg-[#E9F2F7]",
-  }[backgroundColor];
+const SearchBar = ({ placeholder, className }) => {
   return (
-    <div
-      className={`shadow-search mx-5  my-4 flex max-h-fit max-w-full rounded-md ${bgClassName} pr-[10px] focus:ring-1 `}
-    >
+    <div className={`${className} `}>
       <input
         type="text"
         className={`input-text h-fit w-full bg-transparent p-[10px] focus:outline-none`}

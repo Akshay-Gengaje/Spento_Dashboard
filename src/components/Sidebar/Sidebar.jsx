@@ -17,17 +17,18 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="my-5 ml-10 hidden min-w-fit rounded-[10px] border border-[#3d3d3d66] lg:flex lg:flex-col">
+    <div className="my-5 ml-10 hidden min-w-[22%] rounded-[10px] border border-[#3d3d3d66] lg:flex lg:flex-col">
       <div>
         <Menu />
         <Devider className="h-[1px] w-full bg-darkBlue" />
         <SearchBar
           placeholder="Search"
-          backgroundColor="bright_gray"
-          color="#000"
+          className={
+            "shadow-search mx-5  my-4 flex max-h-fit max-w-full rounded-md bg-[#E9F2F7] pr-[10px] focus:ring-1"
+          }
         />
       </div>
-      <div className="w-full overflow-scroll">
+      <div className="w-full overflow-auto">
         {routes.map((route) => (
           <div key={route.category.name}>
             <div
@@ -45,7 +46,7 @@ const Sidebar = () => {
               <span className="text-lg uppercase">{route.category.name}</span>
             </div>
             {expandedRoutes.includes(route.category.name) && route.children && (
-              <div className="pl-6">
+              <div className="pl-1">
                 {route.children.map((subRoute) => (
                   <SubMenu key={subRoute.path} subRoute={subRoute} />
                 ))}

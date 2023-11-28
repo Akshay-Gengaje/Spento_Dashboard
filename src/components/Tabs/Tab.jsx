@@ -1,9 +1,9 @@
 import { useState } from "react";
-
+import TabMenu from "./TabMenu";
 // Tab Component
 const Tab = ({ label, isActive, onClick }) => (
   <div
-    className={`cursor-pointer px-10 py-2 hover:bg-gray-200 ${
+    className={`hover:bg-gray-200 cursor-pointer px-2 py-2 md:px-10 ${
       isActive ? "border-b-2 border-darkBlue" : ""
     }`}
     onClick={onClick}
@@ -20,19 +20,22 @@ const Tabs = ({ tabs }) => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="bg-brightGray mx-auto my-8 max-w-full rounded-md ">
-      <div className="border-gray flex justify-around border-b pt-2">
-        {tabs.map((tab, index) => (
-          <Tab
-            key={index}
-            label={tab.label}
-            isActive={index === activeTab}
-            onClick={() => setActiveTab(index)}
-          />
-        ))}
+    <>
+      <div className="mx-auto my-3 max-w-full rounded-md bg-brightGray ">
+        <div className="flex justify-around border-b border-gray pt-2">
+          {tabs.map((tab, index) => (
+            <Tab
+              key={index}
+              label={tab.label}
+              isActive={index === activeTab}
+              onClick={() => setActiveTab(index)}
+            />
+          ))}
+        </div>
+        <TabMenu tab={activeTab} />
       </div>
       <TabContent content={tabs[activeTab].content} />
-    </div>
+    </>
   );
 };
 
